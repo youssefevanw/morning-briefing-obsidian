@@ -1,0 +1,132 @@
+.mb-view {
+  padding: 16px;
+  font-family: var(--font-interface);
+  color: var(--text-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+}
+
+.mb-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mb-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.mb-header .mb-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.mb-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mb-section h3 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mb-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mb-list li {
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.mb-task-meta {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-left: 6px;
+}
+
+.mb-empty {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.mb-energy {
+  display: flex;
+  gap: 8px;
+}
+
+.mb-pill {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.mb-pill:hover {
+  background: var(--background-modifier-hover);
+}
+
+.mb-pill.is-selected {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+}
+
+.mb-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.mb-actions button {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.mb-actions button:hover {
+  background: var(--background-modifier-hover);
+}
+
+.mb-overdue {
+  color: var(--text-error);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.mb-priority-p1 { color: var(--text-error); }
+.mb-priority-p2 { color: var(--text-warning); }
+.mb-priority-p3 { color: var(--text-accent); }
+.mb-priority-p4 { color: var(--text-muted); }
+
+.mb-error {
+  color: var(--text-error);
+  font-size: 0.85rem;
+}

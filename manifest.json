@@ -1,0 +1,10 @@
+{
+  "id": "morning-briefing",
+  "name": "Morning Briefing",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Morning and evening briefings sourced from Todoist, Focus Fox, Google Calendar, and vault notes.",
+  "author": "youssefevanw",
+  "authorUrl": "https://github.com/youssefevanw",
+  "isDesktopOnly": true
+}
