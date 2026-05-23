@@ -32,6 +32,81 @@
   gap: 6px;
 }
 
+.mb-slot-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.mb-slot-tab {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.mb-slot-tab:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.mb-slot-tab.is-selected {
+  background: var(--background-primary);
+  color: var(--text-normal);
+  border-color: var(--interactive-accent);
+}
+
+.mb-reflection-prompt {
+  padding: 8px 12px;
+  border-left: 3px solid var(--interactive-accent);
+  background: var(--background-secondary);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.mb-reflection-input {
+  width: 100%;
+  min-height: 88px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  font-family: var(--font-text);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  resize: vertical;
+}
+
+.mb-reflection-input:focus {
+  outline: none;
+  border-color: var(--interactive-accent);
+}
+
+.mb-reflection-input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.mb-reading-link {
+  color: var(--text-accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mb-reading-link:hover {
+  text-decoration: underline;
+}
+
+.mb-completed-task {
+  color: var(--text-muted);
+}
+
 .mb-section h3 {
   margin: 0;
   font-size: 0.85rem;
@@ -67,9 +142,16 @@
   font-size: 0.9rem;
 }
 
+.mb-event-time {
+  display: inline-block;
+  min-width: 64px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
 .mb-energy {
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 
 .mb-pill {
@@ -94,6 +176,35 @@
   border-color: var(--interactive-accent);
 }
 
+.mb-pill-num {
+  padding: 6px 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.mb-pill:disabled,
+.mb-energy.is-disabled .mb-pill {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mb-pill:disabled:hover {
+  background: var(--background-secondary);
+}
+
+.mb-energy-hint {
+  margin-top: 4px;
+}
+
+.mb-energy-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+
 .mb-actions {
   display: flex;
   gap: 8px;
@@ -115,10 +226,51 @@
   background: var(--background-modifier-hover);
 }
 
-.mb-overdue {
-  color: var(--text-error);
-  font-weight: 600;
-  margin-right: 4px;
+.mb-task-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.mb-checkbox {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.mb-checkbox:hover {
+  border-color: var(--interactive-accent);
+  background: var(--background-modifier-hover);
+}
+
+.mb-checkbox.is-completing {
+  background: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+  transform: scale(0.85);
+  cursor: default;
+}
+
+.mb-task-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.mb-task-title {
+  display: block;
+  line-height: 1.35;
+}
+
+.mb-overdue-tag {
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.85;
 }
 
 .mb-priority-p1 { color: var(--text-error); }
